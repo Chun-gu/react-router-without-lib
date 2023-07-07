@@ -46,7 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
 ### 2) 버튼 클릭과 뒤로 가기로 페이지 이동
 
-[접근성을 이유로 특별한 경우를 제외하고 일반적으로 페이지 이동은 `a`태그를 이용해야 하기 때문에](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#onclick_events) `a` 태그를 반환하는 `Link` 컴포넌트를 만들었다.  
+[특별한 경우를 제외하고 페이지 이동은 일반적으로 `a`태그를 이용해야 하기 때문에](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#more_on_links) `a` 태그를 반환하는 `Link` 컴포넌트를 만들었다.  
 클릭시 `e.preventDefault()`로 기본 동작을 막고, `useRouter` 훅의 `push`와 `replace`를 사용해 세션 히스토리 스택에 `to`를 push 하거나 replace 한다.
 
 ```tsx

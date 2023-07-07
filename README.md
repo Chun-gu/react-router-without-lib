@@ -32,7 +32,9 @@ const { push } = useRouter();
 
 ### 1) 주소에 맞는 페이지 렌더링
 
-[React의 공식 문서에 따르면 Children은 Legacy API이다.](https://react.dev/reference/react/Children) 그래서 공식문서에서 제시한 대안 중 하나인 [객체의 배열을 prop으로 받는 방식](https://react.dev/reference/react/Children#accepting-an-array-of-objects-as-a-prop)을 선택했다. react-router-dom 또한 v6가 되면서 [튜토리얼에서 이 방식을 사용한다.](https://reactrouter.com/en/main/start/tutorial#adding-a-router)
+요구사항에 따라 `Router`의 `children`으로 `Route`들을 받은 뒤 `Router` 내부에서 `Children API`를 사용해 `Route`를 순회하려 했지만
+[React의 공식 문서에 따르면 Children은 Legacy API이다.](https://react.dev/reference/react/Children)  
+그래서 공식문서에서 제시한 대안 중 하나인 [객체의 배열을 prop으로 받는 방식](https://react.dev/reference/react/Children#accepting-an-array-of-objects-as-a-prop)을 선택했다. react-router-dom 또한 v6가 되면서 [튜토리얼에서 이 방식을 사용한다.](https://reactrouter.com/en/main/start/tutorial#adding-a-router)
 
 ```tsx
 ReactDOM.createRoot(document.getElementById("root")!).render(
